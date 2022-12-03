@@ -36,8 +36,8 @@ func NewTrack(distance int) Track {
 // the car will not move.
 func Drive(car Car) Car {
 	if car.batteryDrain <= car.battery {
-		car.battery = car.battery - car.batteryDrain
-		car.distance = car.distance + car.speed
+		car.battery -= car.batteryDrain
+		car.distance += car.speed
 	}
 	return car
 }
